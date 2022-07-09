@@ -14,15 +14,18 @@
 
 #secTimer {
     float: right;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
 }
 
 #questionsSec {
     margin: 20px;
 }
 
-#startTime {
+#startQuiz {
     background-color: var(--main-bg-color);
-    margin-left: 33%;
+    margin-left: 35%;
     padding: 15px 32px;
     font-size: 20px;
     color: var(--text-color);
@@ -30,7 +33,7 @@
 
 #Submit {
     background-color: var(--main-bg-color);
-    margin-left: 33%;
+    margin-left: 35%;
     padding: 15px 32px;
     font-size: 20px;
     color: var(--text-color);
@@ -61,7 +64,7 @@
 }
 
 button {
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 textarea {

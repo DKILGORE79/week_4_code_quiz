@@ -4,14 +4,14 @@ var questionIndex = 0;
 var wrapper = document.querySelector("#wrapper");
 var questionsSec = document.querySelector("#questionsSec");
 var secTimer = document.querySelector("#secTimer");
-var timer = document.querySelector("#startTime");
+var timer = document.querySelector("#startQuiz");
 
-// Remaining time, 15 sec per question. 1 sec extra for delay in display
-var timeRem = 76;
+// Remaining time, 10 sec per question. 1 sec extra for delay in display
+var timeRem = 81;
 // For holding time interval
 var holdTime = 0;
 // Penalty time
-var penTime = 15;
+var penTime = 10;
 // new ul element
 var ulEl = document.createElement("ul");
 
@@ -78,7 +78,7 @@ function compare(event) {
 
     if (questionIndex >= questions.length) {
         allDone();
-        divEl.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+        divEl.textContent = "Done!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
     } else {
         displayQuiz(questionIndex);
     }
