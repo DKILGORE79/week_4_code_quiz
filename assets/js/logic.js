@@ -33,19 +33,32 @@ timer.addEventListener("click", function () {
     }
     displayQuiz(questionIndex);
 });
-
-// Displaying question and options - Tutor helped here
+// ----------------------------------------------------------------------------------------------------
+// Displaying question and options - Tutor helped here - Fisher-Yates solution -https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function displayQuiz(questionIndex) {
     // Existing questions clearing
     questionsSec.innerHTML = "";
     ulEl.innerHTML = "";
     // Loop for accessing each question
     for (var i = 0; i < questions.length; i++) {
+        let currentIndex = questions.length, randomIndex;
+
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [questions[currentIndex], questions[randomIndex]] = [
+                questions[randomIndex], questions[currentIndex]];
+        }
         // Appends question title only
         var disQues = questions[questionIndex].title;
         var disOption = questions[questionIndex].choices;
         questionsSec.textContent = disQues;
     }
+
     // Loop for accessing the options
     disOption.forEach(function (newItem) {
         var listItem = document.createElement("li");
@@ -55,6 +68,7 @@ function displayQuiz(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
+
 // Comparing user answer with true answer
 function compare(event) {
     var element = event.target;
@@ -87,6 +101,8 @@ function compare(event) {
     questionsSec.appendChild(divEl);
 
 }
+
+// --------------------------------------------------------------------------------------------
 // All done will appear when quiz is finished
 function allDone() {
     questionsSec.innerHTML = "";
@@ -114,7 +130,9 @@ function allDone() {
         questionsSec.appendChild(pEl2);
     }
 
-    // Creating label element
+
+    // --------------------------------------------------------------------------------------------------------
+    // Creating label
     var labelEl = document.createElement("label");
     labelEl.setAttribute("id", "labelEl");
     labelEl.textContent = "Enter your initials: ";
@@ -167,5 +185,7 @@ function allDone() {
 
 
 }
+
+
 
 
