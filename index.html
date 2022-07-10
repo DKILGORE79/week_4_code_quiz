@@ -11,14 +11,20 @@
     <title>Code Quiz</title>
 </head>
 
-<body>
+<body class="body">
+
+    <div class="video-wrapper">
+        <video playsinline autoplay muted loop poster="./assets/images/question still.jpg">
+            <source src="./assets/images/Question-Marks_bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <!-- Highscores data link -->
-    <a href="scoredata.html">View Highscores</a>
+    <button onclick="document.location='scoredata.html'">View Highscores</button>
     <!-- Timer -->
     <section id="secTimer"></section>
-    <!-- The main box layout-->
+    <!-- question layout-->
     <section id="wrapper">
-
         <!-- content layout -->
         <section id="questionsSec">
             <h1>Coding Quiz Challenge</h1>

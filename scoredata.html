@@ -12,21 +12,27 @@
 </head>
 
 <body>
-    <!-- The main box layout-->
-    <section id="secTimer"></section>
-    <section id="wrapper">
-        <!-- Timer -->
 
-        <!-- Quiz content layout -->
-        <section id="questionsSec">
-            <h1>Highscores</h1>
-            <ul id="highScore"></ul>
-            <!-- Buttons -->
-            <button id="goBack">Go Back</button>
-            <button id="clear" value="reset">Clear Highscore</button>
+    <div class="video-wrapper">
+        <video playsinline autoplay muted loop poster="./assets/images/question still.jpg">
+            <source src="./assets/images/Question-Marks_bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- The main box layout-->
+        <section id="secTimer"></section>
+        <section id="wrapper">
+            <!-- Timer -->
+
+            <!-- Quiz content layout -->
+            <section id="questionsSec">
+                <h1>Highscores</h1>
+                <ul id="highScore"></ul>
+                <!-- Buttons -->
+                <button id="goBack">Go Back</button>
+                <button id="clear" value="reset">Clear Highscore</button>
+            </section>
         </section>
-    </section>
-    <script src="./assets/js/scoredata.js"></script>
+        <script src="./assets/js/scoredata.js"></script>
 </body>
 
 </html>

@@ -15,7 +15,9 @@ var penTime = 10;
 // new ul element
 var ulEl = document.createElement("ul");
 
+
 // For trigegring the timer and display it - https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
+
 timer.addEventListener("click", function () {
     if (holdTime === 0) {
         holdTime = setInterval(function () {
@@ -78,7 +80,7 @@ function compare(event) {
 
     if (questionIndex >= questions.length) {
         allDone();
-        divEl.textContent = "Done!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+        divEl.textContent = "Finished!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
     } else {
         displayQuiz(questionIndex);
     }
@@ -141,7 +143,7 @@ function allDone() {
 
         if (initials === null) {
 
-            console.log("Enter something!");
+            console.log("No value entered!");
 
         } else {
             var finalScore = {
