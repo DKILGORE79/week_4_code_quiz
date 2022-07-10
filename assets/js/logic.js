@@ -15,7 +15,7 @@ var penTime = 10;
 // new ul element
 var ulEl = document.createElement("ul");
 
-// For trigegring the timer and display it
+// For trigegring the timer and display it - https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
 timer.addEventListener("click", function () {
     if (holdTime === 0) {
         holdTime = setInterval(function () {
@@ -32,7 +32,7 @@ timer.addEventListener("click", function () {
     displayQuiz(questionIndex);
 });
 
-// Displaying question and options
+// Displaying question and options - Tutor helped here
 function displayQuiz(questionIndex) {
     // Existing questions clearing
     questionsSec.innerHTML = "";
@@ -119,7 +119,7 @@ function allDone() {
 
     questionsSec.appendChild(labelEl);
 
-    // Creating input for user initials
+    //input for user initials
     var inputEl = document.createElement("input");
     inputEl.setAttribute("type", "text");
     inputEl.setAttribute("id", "initials");
@@ -127,7 +127,7 @@ function allDone() {
 
     questionsSec.appendChild(inputEl);
 
-    // Creating submit button
+    // submit button
     var submitButton = document.createElement("button");
     submitButton.setAttribute("type", "submit");
     submitButton.setAttribute("id", "Submit");
@@ -135,13 +135,13 @@ function allDone() {
 
     questionsSec.appendChild(submitButton);
 
-    // function for accessing intitals and score data
+    // function for accessing intitals and score data - https://www.delftstack.com/howto/javascript/javascript-onclick-submit-form/
     submitButton.addEventListener("click", function () {
         var initials = inputEl.value;
 
         if (initials === null) {
 
-            console.log("No value entered!");
+            console.log("Enter something!");
 
         } else {
             var finalScore = {
@@ -161,6 +161,8 @@ function allDone() {
             window.location.replace("./scoredata.html");
         }
     });
+
+
 
 }
 

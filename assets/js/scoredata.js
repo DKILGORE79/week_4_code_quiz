@@ -2,7 +2,7 @@ var highScore = document.querySelector("#highScore");
 var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
 
-// Retreives local stroage 
+// Retreives local stroage - https://stackoverflow.com/questions/29370017/adding-a-high-score-to-local-storage
 var scoreData = localStorage.getItem("scoreData");
 scoreData = JSON.parse(scoreData);
 
