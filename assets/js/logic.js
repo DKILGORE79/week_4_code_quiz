@@ -15,7 +15,7 @@ var penTime = 10;
 // new ul element
 var ulEl = document.createElement("ul");
 
-
+// ---------Timer---------------------------------------------------------------------------------
 // For trigegring the timer and display it - https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
 
 timer.addEventListener("click", function () {
@@ -33,8 +33,10 @@ timer.addEventListener("click", function () {
     }
     displayQuiz(questionIndex);
 });
-// ----------------------------------------------------------------------------------------------------
-// Displaying question and options - Tutor helped here - Fisher-Yates solution -https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+
+
+// ---------QUESTION LOGIC-------------------------------------------------------------------------
+// Displaying question and options - Tutor helped here - Fisher-Yates solution - https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function displayQuiz(questionIndex) {
     // Existing questions clearing
     questionsSec.innerHTML = "";
@@ -69,6 +71,7 @@ function displayQuiz(questionIndex) {
     })
 }
 
+
 // Comparing user answer with true answer
 function compare(event) {
     var element = event.target;
@@ -102,7 +105,7 @@ function compare(event) {
 
 }
 
-// --------------------------------------------------------------------------------------------
+// ------------Score--------------------------------------------------------------------------------
 // All done will appear when quiz is finished
 function allDone() {
     questionsSec.innerHTML = "";

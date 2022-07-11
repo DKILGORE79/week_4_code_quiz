@@ -17,13 +17,13 @@
     background-color: black;
 }
 
+
 .video-wrapper {
-    object-fit: cover;
-     height: 100%;
-    width: 100%; 
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    background-size: cover;
     z-index: -1;
 }
 
@@ -130,10 +130,10 @@ li {
         position: absolute;
         left: 30%;
     }
-	
-	p {
-		font-size: 23px;
-	}
+
+    p {
+        font-size: 23px;
+    }
 
     a {
         margin-left: 10%;
@@ -194,7 +194,7 @@ li {
     #wrapper {
         position: absolute;
         left: 0%;
-		width: 290px
+        width: 290px
     }
 
     a {
