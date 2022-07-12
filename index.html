@@ -2,48 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- setting the viewport for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <!-- Title-->
-    <title>Code Quiz</title>
+  <meta charset="UTF-8">
+  <!-- setting the viewport for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <!-- Title-->
+  <title>Code Quiz</title>
 </head>
 
 <body class="body">
-    <!-- Video Background-->
-    <div class="video-wrapper">
-        <video playsinline autoplay muted loop poster="./assets/images/question still.jpg">
-            <source src="./assets/images/Question-Marks_bg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+  <!-- Video Background-->
+  <div class="video-wrapper">
+    <video playsinline autoplay muted loop poster="./assets/images/questionstill.jpg">
+      <source src="./assets/images/Question-Marks_bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <main>
     <!-- Highscores data link -->
-    <button onclick="document.location='scoredata.html'">View Highscores</button>
+    <button id="highscore" onclick="document.location='scoredata.html'">View High Scores</button>
     <!-- Timer -->
     <section id="secTimer"></section>
     <!-- question layout-->
     <section id="wrapper">
-        <!-- content layout -->
-        <section id="questionsSec">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the following questions within the time limit. Incorrect
-                answers will penalize your score/time by 10 seconds!</p>
-            <ul id="optionsUl"></ul>
-            <!-- Button for starting the quiz -->
-            <button id="startQuiz">Start Quiz</button>
-        </section>
-
+      <!-- content layout -->
+      <section id="questionsSec">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following questions within the time limit. Incorrect
+          answers will penalize your score/time by 10 seconds!</p>
+        <ul id="optionsUl">
+        </ul>
+        <!-- Button for starting the quiz -->
+        <button id="startQuiz">Start Quiz</button>
+      </section>
     </section>
-
-	<footer id="footer"> &copy; 2022 Derek Kilgore</footer>
-
-	
-    <script src="./assets/js/questions.js"></script>
-    <script src="./assets/js/logic.js"></script>
-    <script src="./assets/js/scoredata.js"></script>
-
+  </main>
+  <!-- Footer -->
+  <footer id="footer">
+    <h2>&copy; 2022 Derek Kilgore</h2>
+  </footer>
+  <script src="./assets/js/questions.js"></script>
+  <script src="./assets/js/logic.js"></script>
+  <script src="./assets/js/scoredata.js"></script>
 </body>
 
 </html>
